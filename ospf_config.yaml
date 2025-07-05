@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=null
+
+routers:
+  - name: R1
+    ip: 192.168.101.200
+    username: admin
+    password: admin123
+    loopback: 10.10.10.1
+    ospf_networks:
+      - { network: 10.10.10.0, wildcard: 0.0.0.255, area: 0 } 
+      - { network: 192.168.10.0, wildcard: 0.0.0.255, area: 0 }
+      - { network: 192.168.101.0, wildcard: 0.0.0.255, area: 0 }
+      - { network: 192.168.100.0, wildcard: 0.0.0.255, area: 0 }
+      - { network: 192.168.60.0, wildcard: 0.0.0.255, area: 0 }
+
+  - name: R2
+    ip: 192.168.10.2
+    username: admin
+    password: admin123
+    loopback: 10.10.10.2
+    ospf_networks:
+      - { network: 10.10.10.0, wildcard: 0.0.0.255, area: 0 }
+      - { network: 192.168.10.0, wildcard: 0.0.0.255, area: 0 }
+      - { network: 192.168.50.0, wildcard: 0.0.0.255, area: 0 }
+      - { network: 192.168.70.0, wildcard: 0.0.0.255, area: 0 }
+
+  - name: R3
+    ip: 192.168.60.2
+    username: admin
+    password: admin123
+    loopback: 10.10.10.3
+    ospf_networks:
+      - { network: 10.10.10.0, wildcard: 0.0.0.255, area: 0 }
+      - { network: 192.168.60.0, wildcard: 0.0.0.255, area: 0 }
+      - { network: 192.168.40.0, wildcard: 0.0.0.255, area: 0 }

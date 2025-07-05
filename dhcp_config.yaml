@@ -1,0 +1,36 @@
+# yaml-language-server: $schema=null
+routers:
+  - name: R1
+    ip: 192.168.100.1
+    username: admin
+    password: admin123
+    dhcp:
+      interface: FastEthernet2/0
+      gateway_ip: 192.168.100.1
+      network: 192.168.100.0
+      netmask: 255.255.255.0
+      excluded:
+        - 192.168.100.1
+        - 192.168.100.10
+      dns: 8.8.8.8
+      lease:
+        days: 0
+        hours: 12
+
+  - name: R2
+    ip: 192.168.70.1
+    username: admin
+    password: admin123
+    dhcp:
+      interface: FastEthernet1/0
+      gateway_ip: 192.168.70.1
+      network: 192.168.70.0
+      netmask: 255.255.255.0
+      excluded:
+        - 192.168.70.1
+        - 192.168.70.10
+      dns: 8.8.8.8
+      lease:
+        days: 0
+        hours: 12
+
